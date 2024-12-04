@@ -17,12 +17,15 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 21.x
-
+      
+      # Install dependencies
       - name: Install dependencies
         run: npm install
-
+      
+      # Run build
       - name: Run build
         run: npm run build
-
+      
+      # Run component tests
       - name: Run Cypress tests
         run: npm run test-component
